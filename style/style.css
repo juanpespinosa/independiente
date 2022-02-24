@@ -17,13 +17,13 @@ body {
     background-image: -webkit-linear-gradient(left,#e92113,#c70707);
     display: grid; 
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 80vh 2vh;
+    grid-template-rows: 20% auto auto;
     grid-template-areas:
     "header"
     "main"
     "footer";
     width: 100%;
-    height: 100%;
+    min-height: auto;
 }
 
 /*HEADER*/
@@ -159,7 +159,7 @@ nav a:hover {
 /* SECCION PRINCIPAL */
 
 main {
-    height: 80vh;
+    height: auto;
     width: 100%;
     background-image: url(../images/cancha-para-la-web.jpg);
     background-size: cover;
@@ -180,7 +180,7 @@ main {
     text-align: center;
 }
 
-.principal h2 {
+h2 {
     color: #fff9f9;
     word-spacing: 0.5rem;
     font-weight: bold;
@@ -193,7 +193,17 @@ main {
     text-align: left;
 }
 
-.principal p {
+h3 {
+    color: #fff9f9;
+    font-weight: bold;
+    font-size: 6vh;
+    letter-spacing: 0.02rem;
+    text-shadow: 0 -1px 4px rgb(8, 5, 5), 0 0px 1px rgb(51, 16, 16), 0 1px 1px #b90000, 0px -2px 0px rgb(163, 160, 160), 0px 0px 1px rgba(208, 30, 30, 0);
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+p {
     color: hsl(0, 0%, 100%);
     font-size: 1.1rem;
     letter-spacing: 1px;
@@ -201,7 +211,7 @@ main {
     text-align: left;
 }
 
-.principal span {
+span {
     color: hsl(0, 0%, 100%);
     background-color: rgba(252, 55, 55, 0.582);
     font-size: 0.9rem;
@@ -314,12 +324,14 @@ main {
 /* FOOTER*/
 
 .copyright {    
+    display: flex;
     text-align: center;
     background-color: #c70707;
     background-image: -webkit-linear-gradient(left,#ff0000,#c70707);
     color: #fff9f9f3;
     font-size: 0.8rem;
     border-top: 0.1rem groove #2b0d04;
+    justify-content: center;
 }
 
 footer a {
@@ -331,6 +343,22 @@ footer a {
 
 footer a:hover {
     color: rgb(233, 209, 202);
+}
+
+.nota {
+    background-color: rgba(12, 11, 10, 0.205);
+    box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.56);
+}
+
+.container .row{
+    align-items: center;
+    justify-content: center;
+}
+
+.historia {
+    background-color: #dd3f3f48;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.36);
 }
 
 @media screen and (max-width: 360px) {
@@ -345,7 +373,8 @@ footer a:hover {
         "main"
         "footer";
         width: 100%;
-        height: 100%;
+        min-height: 100%;
+        overflow: scroll;
     }
     
     /*HEADER*/
@@ -482,7 +511,7 @@ footer a:hover {
     /* SECCION PRINCIPAL */
     
     main {
-        height: 100vh;
+        height: 100%;
         width: 100%;
         background-color: white;
         display: flex;
@@ -630,7 +659,7 @@ footer a:hover {
     
     /* FOOTER*/
     
-    .copyright {    
+    .copyright {  
         text-align: center;
         background-color: #c70707;
         background-image: -webkit-linear-gradient(left,#ff0000,#c70707);
@@ -649,4 +678,5 @@ footer a:hover {
     footer a:hover {
         color: rgb(233, 209, 202);
     }
-}
+
+    }
