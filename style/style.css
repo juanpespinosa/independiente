@@ -17,7 +17,7 @@ body {
     background-image: -webkit-linear-gradient(left,#e92113,#c70707);
     display: grid; 
     grid-template-columns: 1fr;
-    grid-template-rows: 20% auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
     "header"
     "main"
@@ -26,13 +26,21 @@ body {
     min-height: auto;
 }
 
+#carouselMultiItemExample {
+    position: relative !important;
+    width: 50% !important;
+    height: auto !important;
+}
+
 /*HEADER*/
 header {
     color: #fff9f9f3;
     width: 100%;
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 65% 35%; 
+    grid-template-rows: auto auto; 
+    border-bottom: 2px solid rgba(190, 189, 189, 0.705);
+    box-shadow: 200px 200px 200px 200px rgba(0, 0, 0, 0.36);
 }
 
 .home {
@@ -42,7 +50,7 @@ header {
 
 /* LOGO */
 #escudo-home {
-    height: 140%;
+    min-height: 210%;
     margin-top: -30%;
 }
 
@@ -156,13 +164,28 @@ nav a:hover {
     padding-left: 1rem;
 }
 
-/* SECCION PRINCIPAL */
+/* SECCION PRINCIPAL INDEX*/
 
 main {
-    height: auto;
+    min-height: 100vh;
     width: 100%;
     background-image: url(../images/cancha-para-la-web.jpg);
     background-size: cover;
+}
+
+#tienda {
+    flex-direction: row;
+    min-height: 90vh;
+}
+
+/* SECCION PRINCIPAL HISTORIA*/
+.history {
+    background-image: none;
+    background-color: white !important;
+}
+
+#carouselMultiItemExample {
+    align-SELF: CENTER;
 }
 
 /* PRINCIPAL */
@@ -174,13 +197,12 @@ main {
     background-color: rgba(12, 11, 10, 0.205);
     box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.56);
     width: 50%;
-    height: auto;
     overflow-wrap: break-word;
     float: left;
     text-align: center;
 }
 
-h2 {
+.principal h2 {
     color: #fff9f9;
     word-spacing: 0.5rem;
     font-weight: bold;
@@ -190,6 +212,22 @@ h2 {
     padding-left: 1.5rem;
     margin-top: -20%;
     margin-bottom: 2%;
+    text-align: left;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+h2 {
+    color: #fff9f9;
+    word-spacing: 0.5rem;
+    font-weight: bold;
+    font-size: 10vh;
+    letter-spacing: 0.05rem;
+    text-shadow: 0 -1px 4px rgb(8, 5, 5), 0 0px 1px #fff, 0 1px 1px #1b1616, 0px -2px 0px rgb(163, 160, 160), 0px 0px 1px rgba(208, 30, 30, 0);
     text-align: left;
 }
 
@@ -355,10 +393,15 @@ footer a:hover {
     justify-content: center;
 }
 
+/* HISTORIA */
 .historia {
-    background-color: #dd3f3f48;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) -180%, rgba(235,38,49,1) 100%);
+    padding: 1%;
     border-radius: 3px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.36);
+    overflow: hidden;
+    margin: 1%;
 }
 
 @media screen and (max-width: 360px) {
