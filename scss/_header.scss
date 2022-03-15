@@ -1,3 +1,5 @@
+@import "_variables";
+
 /*HEADER*/
 header {
     color: #fff9f9f3;
@@ -7,14 +9,15 @@ header {
     grid-template-rows: auto auto; 
     border-bottom: 1.5px solid rgba(190, 189, 189, 0.705);
     box-shadow: 200px 200px 200px 200px rgba(0, 0, 0, 0.36);
+    background-color: #ed1c24;
 }
 
 .home {
     width: 100% ;
     display: inline-flex;
     #escudo-home {
-        min-height: 210%;
-        margin-top: -30%;
+        min-height: 150%;
+        padding-left: 10px;
     }
     /* TITULO */
     h1 {
@@ -23,8 +26,8 @@ header {
         font-weight: 600;
         font-size: 2.5vw;
         letter-spacing: 0.08vw;
-        text-shadow: 0 -1px 0px rgb(255, 177, 131), 0 -1px 1px rgb(248, 146, 78), 0 -6px 10px #ff8000, 0 -10px 20px #F00, 1px 1px 1px rgba(208, 30, 30, 0);
-        color: #000000;
+        text-shadow: 0 1px 0px rgb(34, 30, 27), 0 2px 1px rgb(51, 49, 49), 0 -6px 10px #ff8000, 0 -10px 20px #F00, 1px 1px 1px rgba(208, 30, 30, 0);
+        color: $blanco-web;
     }
 }
 
@@ -40,7 +43,7 @@ nav {
         padding-right: 20px;
         border-right: 2px groove rgba(248, 109, 109, 0.411);
         a {
-            color: #FFFFFF;
+            color: $blanco-web;
             text-shadow: 0 0 8px #ffa498;
             text-decoration: none;
             font-weight: bold;
@@ -103,21 +106,22 @@ nav {
         box-shadow: 1px 1px 10px 0 #000000;
         border-radius: 1rem;
         text-decoration: none;
+        transform: scale(1.05);
     }
 }
 
 /* REDES SOCIALES */
 #menu-icon {
-    height: 50%;
-    margin-left: 2vw;
-    margin-right: 3vw;
+    height: 40%;
+    margin-left: 8vw;
+    margin-top: 2vh;
 }
 
 .social__media ul li {
     display: inline-block;
-}
-
-#social-media {
-    height: 1vW;
-    padding-left: 1rem;
+    margin-top: 2vh;
+    img {
+        height: 1vW;
+        padding-left: 1rem;
+    }
 }

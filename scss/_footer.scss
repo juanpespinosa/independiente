@@ -1,0 +1,21 @@
+/* FOOTER*/
+
+.copyright {    
+    display: flex;
+    text-align: center;
+    background-color: #c70707;
+    background-image: -webkit-linear-gradient(left,#ff0000,#c70707);
+    color: #fff9f9f3;
+    font-size: 0.8rem;
+    border-top: 0.1rem groove #2b0d04;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff9f9f3;
+    &:hover {
+        color: rgb(233, 209, 202);
+    }
+}

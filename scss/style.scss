@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import "_header";
+@import "_footer";
+@import "_variables";
+@import "_generales";
 
-$degrade: -webkit-linear-gradient(right,#b3362e,#f54141);
+
 
 /* RESET */
 * {
@@ -40,8 +43,9 @@ body {
 /* SECCION PRINCIPAL INDEX*/
 
 main {
-    min-height: 100vh;
-    width: 100%;
+    //min-height: 100vh;
+    //width: 100%;
+    @include main-size(100%, 100vh);
     background-image: url(../images/cancha-para-la-web.jpg);
     background-size: cover;
 }
@@ -75,7 +79,7 @@ main {
     overflow: hidden;
     margin: 1%;
     p {
-        color: hsl(0, 0%, 100%);
+        color: $blanco-web;
         font-size: 1.2rem;
         letter-spacing: 1px;
         text-shadow: 0px 2px 4px #1a0f0f;
@@ -88,7 +92,7 @@ main {
 .noticia {
     background-image: $degrade;
     h2 {
-        color: #fff9f9;
+        color: $blanco-web;
         word-spacing: 0.5rem;
         font-weight: bold;
         font-size: 7rem;
@@ -102,7 +106,7 @@ main {
     background-color: rgba(12, 11, 10, 0.205);
     box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.56);
     p {
-        color: hsl(0, 0%, 100%);
+        color: $blanco-web;
         font-size: 1.1rem;
         letter-spacing: 1px;
         text-shadow: 0px 2px 4px #1a0f0f;
@@ -130,18 +134,15 @@ table, th, td {
 
 /* PRINCIPAL INDEX*/
 .principal {
-    color: white;
-    margin-top: 2%;
-    margin-left: 4%;
-    padding: 2%;
+    color: $blanco-web;
     background-color: rgba(12, 11, 10, 0.205);
     box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.56);
     width: 50%;
-    overflow-wrap: break-word;
     float: left;
     text-align: center;
+    margin: 30px;
     h2 {
-        color: #fff9f9;
+        color: $blanco-web;
         word-spacing: 0.5rem;
         font-weight: bold;
         font-size: 10vh;
@@ -153,26 +154,25 @@ table, th, td {
         text-align: left;
     }
     p {
-        color: hsl(0, 0%, 100%);
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        text-shadow: 0px 2px 4px #1a0f0f;
-        text-align: left;
+        color: $blanco-web;
+        font-size: 1.4rem;
+        letter-spacing: 0.6px;
+        text-shadow: 0px 2px 4px rgb(27, 25, 25);
     }
     span {
-        color: hsl(0, 0%, 100%);
+        color: $blanco-web;
         background-color: rgba(252, 55, 55, 0.582);
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         letter-spacing: 0.15rem;
         text-shadow: 0px 2px 4px #1a0f0f;   
     }
 }
       
-#novedad {
-    width: 80%;
+#novedad { 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.36);
     border: 0.0.9rem solid rgba(0, 0, 0, 0.753);
     border-radius: 3px 3px 3px 3px;
+    width: 100%;
 }
 
 .side {
@@ -182,7 +182,7 @@ table, th, td {
     flex-direction: column;
     justify-content: space-around;
     height: 75%;
-    width: 22vw;
+    width: 22%;
 }
 
 /* ULTIMO RESULTADO */
@@ -195,7 +195,7 @@ table, th, td {
     border-radius: 7px 10px 10px 10px;
     text-align: center;
         h3 {
-        color: #fff9f9;
+        color: $blanco-web;
         word-spacing: 6px;
         text-align: center;
         font-weight: bold;
@@ -205,7 +205,7 @@ table, th, td {
         text-shadow: 0px 2px 4px #1a0f0f;
     }
     span {
-        color: #fff9f9;
+        color: $blanco-web;
         font-size: 0.8rem;
         letter-spacing: 1px;
         text-shadow: 0px 2px 4px #1a0f0f;
@@ -217,7 +217,7 @@ table, th, td {
 .ultimo__media {
     p {
         margin-bottom: 0;
-        color: #fff9f9;
+        color: $blanco-web;
         background-color: #e7111148;
         font-size: 1.2rem;
         text-align: center;
@@ -243,7 +243,7 @@ table, th, td {
     border-radius: 7px 10px 10px 10px;
     text-align: center;
     span {
-        color: #fff9f9;
+        color: $blanco-web;
         font-size: 0.8rem;
         letter-spacing: 1px;
         text-shadow: 0px 2px 4px #1a0f0f;
@@ -254,26 +254,4 @@ table, th, td {
 
 .proximo img {
     width: 14%;
-}
-
-/* FOOTER*/
-
-.copyright {    
-    display: flex;
-    text-align: center;
-    background-color: #c70707;
-    background-image: -webkit-linear-gradient(left,#ff0000,#c70707);
-    color: #fff9f9f3;
-    font-size: 0.8rem;
-    border-top: 0.1rem groove #2b0d04;
-    justify-content: center;
-}
-
-footer a {
-    text-decoration: none;
-    font-weight: 400;
-    color: #fff9f9f3;
-    &:hover {
-        color: rgb(233, 209, 202);
-    }
 }
